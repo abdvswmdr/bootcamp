@@ -1,8 +1,7 @@
-## Supporting Courses and Builder's Community
+## About Soqoni
 
-  * If you are looking for a structured course with step by step learning enroll into [Ultimate Jenkins Bootcamp by School of Devops.](https://www.udemy.com/course/ultimate-jenkins-bootcamp-by-school-of-devops/?referralCode=BAC80386E38F767AC155).
-  * Join [Devops Builders Community](https://bit.ly/4fHywt0) to connect with fellow builders.
-  * Subscribe to [Devops.Tube](https://devops.tube/) for devops learning. 
+Soqoni is a microservices platform built by Abdulswamad as a portfolio DevOps project.
+It demonstrates a full CI/CD pipeline using Jenkins, Ansible, and Docker across multiple services.
 
 ## Setup Jenkins with Docker
 
@@ -21,8 +20,8 @@ The first command should show you both , client and server information. The seco
 Now, you could launch  a jenkins container on your docker host by using recommended  jenkins image similar to whats recommended in the  official documentation [Docker](https://www.jenkins.io/doc/book/installing/docker/)  using the following sequence of commands. 
 
 ```
-git  clone https://github.com/udbc/bootcamp.git
-cd bootcamp/jenkins
+git  clone https://github.com/abdvswamad/soqoni.git
+cd soqoni/jenkins
 docker compose build 
 docker compose up -d 
 ```
@@ -162,13 +161,13 @@ and then when you start your system, by executing
 docker compose up -d 
 ```
 
-Ensure both the commands are run from the same path where `docker-compose.yaml` for this project exist e.g. `.../bootcamp/jenkins` . 
+Ensure both the commands are run from the same path where `docker-compose.yaml` for this project exist e.g. `.../soqoni/jenkins` . 
 
 
 If you ever need to reset this environment completely follow this process, 
 
 ```
-cd bootcamp/jenkins 
+cd soqoni/jenkins
 docker compose down 
 docker volume rm jenkins_jenkins-data jenkins_jenkins-docker-certs
 docker compose build 
