@@ -23,6 +23,7 @@ services:
     volumes:
       - cs-ansible:/root/workspace
       - /home/abdvswmdr/soqoni:/root/workspace/soqoni
+      - /home/abdvswmdr/.ssh/id_ed25519:/root/github_key:ro
     networks:
       custom:
         ipv4_address: 192.168.61.10

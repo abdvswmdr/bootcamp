@@ -18,9 +18,10 @@
    mysql_db:
      name: "{{ item.key }}"
      state: "{{ item.value.state }}"
+     login_unix_socket: "{{ mysql['config']['socket'] }}"
    with_dict: "{{ mysql['databases'] }}"
    tags:
-    - configure 
+    - configure
 
  - name: create mysql users
    mysql_user:
@@ -29,6 +30,7 @@
      password: "{{ item.value.pass }}"
      priv: "{{ item.value.priv }}"
      state: "{{ item.value.state }}"
+     login_unix_socket: "{{ mysql['config']['socket'] }}"
    with_dict: "{{ mysql['users'] }}"
    tags:
     - configure
