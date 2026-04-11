@@ -9,7 +9,9 @@
 !include <logos/mysql>
 !include <logos/mongodb>
 
+LAYOUT_LEFT_RIGHT()
 LAYOUT_WITH_LEGEND()
+
 title Soqoni — Container Diagram (AKS Deployment)
 
 Person(customer, "Customer", "Web browser")
